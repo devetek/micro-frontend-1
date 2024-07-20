@@ -1,30 +1,9 @@
-# React + TypeScript + Vite
+# Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jika kamu sudah membaca tentang ["The Orchestrator"](https://github.com/devetek/the-orchestrator?tab=readme-ov-file#description), maka ini adalah lanjutan dimana ide tersebut dapat diimplementasikan. Ini adalah microservice pertama yang di release, dengan nama `devetek/micro-frontend-2`. Karena percobaan pertama menggunakan Remix belum terselesaikan.
 
-Currently, two official plugins are available:
+## Cara Kerja
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Untuk dapat menyatu dengan "The Orchestrator", aplikasi dengan basis vite ini perlu dipastikan mengexpose file manifest. Cek di file `vite.config.ts` dan `package.json` untuk melihat konfigurasi yang digunakan. Dengan hasil dimana terdapat file manifest.json yang dapat diakses secara public dari hasil build.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Selanjutnya, lihat konfigurasi di `src/main.tsx` pastikan aplikasi ini dapat berjalan di 2 kondisi. Sebagai sub aplikasi dan sebagai main aplikasi.

@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     manifest: true,
+    copyPublicDir: true,
   },
   server: {
     port: 4000
