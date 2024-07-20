@@ -9,8 +9,6 @@ const reactApp = (
   </React.StrictMode>
 );
 
-console.log("wwww");
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const browserWindow: any = window;
 
